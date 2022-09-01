@@ -1,5 +1,7 @@
+import Title from './Title';
+
 function App() {
-  return <div className="App">8 paths studio init</div>;
+  return <Title />;
 }
 
 export default App;
