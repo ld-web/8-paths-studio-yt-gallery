@@ -36,7 +36,7 @@ const Slider = () => {
   };
 
   return (
-    <SliderContainer onWheel={scrollSlider}>
+    <SliderContainer onWheel={scrollSlider} data-testid="slider-container">
       {VIDEOS.map((video, index) => (
         <SliderItem
           key={video.id}

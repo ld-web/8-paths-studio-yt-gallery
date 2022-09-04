@@ -13,7 +13,10 @@ const Modal = () => {
   };
 
   return (
-    <ModalContainer className={modalState.visible ? 'visible' : 'hidden'}>
+    <ModalContainer
+      className={modalState.visible ? 'visible' : 'hidden'}
+      data-testid="modal-container"
+    >
       <ModalBody>
         <CloseButton src={close} alt="Close" onClick={closeModal} />
         <iframe
