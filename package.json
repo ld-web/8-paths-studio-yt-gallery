@@ -24,7 +24,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint src",
-    "format": "prettier src"
+    "format": "prettier src -l"
   },
   "eslintConfig": {
     "extends": [
