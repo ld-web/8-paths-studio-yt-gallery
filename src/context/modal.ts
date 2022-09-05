@@ -1,7 +1,8 @@
 import React from 'react';
 
+import Video from '../types/Video';
 export interface ModalProps {
-  videoId: string | null;
+  video: Video | null;
   visible?: boolean;
 }
 
@@ -19,14 +20,14 @@ type ActionMap<M extends { [index: string]: any }> = {
 
 type ModalPayload = {
   [ModalAction.CLOSE_MODAL]: undefined;
-  [ModalAction.SET_VIDEO]: string;
+  [ModalAction.SET_VIDEO]: Video;
 };
 
 export type ModalActions =
   ActionMap<ModalPayload>[keyof ActionMap<ModalPayload>];
 
 export const initialState: ModalProps = {
-  videoId: null,
+  video: null,
   visible: false
 };
 
@@ -45,12 +46,12 @@ export const modalReducer = (
   switch (action.type) {
     case ModalAction.CLOSE_MODAL:
       return {
-        videoId: null,
+        video: null,
         visible: false
       };
     case ModalAction.SET_VIDEO:
       return {
-        videoId: action.payload,
+        video: action.payload,
         visible: true
       };
     default:

@@ -23,7 +23,7 @@ const Modal = () => {
           id="ytplayer"
           width="960"
           height="540"
-          src={`https://www.youtube.com/embed/${modalState.videoId}?autoplay=1`}
+          src={modalState.video?.embedUrl()}
         ></iframe>
       </ModalBody>
     </ModalContainer>

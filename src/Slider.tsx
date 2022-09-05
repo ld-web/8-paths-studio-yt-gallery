@@ -3,6 +3,7 @@ import { useContext, useEffect, useState, WheelEventHandler } from 'react';
 import { ModalAction, ModalContext } from './context/modal';
 import VIDEOS from './data/video';
 import { GAP, SliderContainer, SliderItem, WIDTH } from './sliderStyles';
+import Video from './types/Video';
 
 const Slider = () => {
   const { dispatch: modalDispatch } = useContext(ModalContext);
@@ -31,8 +32,8 @@ const Slider = () => {
     });
   };
 
-  const itemClick = (videoId: string) => {
-    modalDispatch({ type: ModalAction.SET_VIDEO, payload: videoId });
+  const itemClick = (video: Video) => {
+    modalDispatch({ type: ModalAction.SET_VIDEO, payload: video });
   };
 
   return (
@@ -42,7 +43,7 @@ const Slider = () => {
           key={video.id}
           idx={index}
           scrollValue={scrollValue}
-          onClick={() => itemClick(video.id)}
+          onClick={() => itemClick(video)}
         >
           <img src={video.thumbnailUrl()} alt="8 paths Studio" />
         </SliderItem>
