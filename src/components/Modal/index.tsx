@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 
-import { ModalAction, ModalContext } from '../../context/modal';
+import { ModalAction, ModalContext } from '@/context/modal';
+
 import close from './img/close.svg';
 import { CloseButton, ModalBody, ModalContainer } from './modalStyles';
 
