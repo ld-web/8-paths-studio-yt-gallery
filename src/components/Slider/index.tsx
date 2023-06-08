@@ -1,9 +1,8 @@
 import { useContext, useEffect, useState, WheelEventHandler } from 'react';
 
-import { ModalAction, ModalContext } from '@/context/modal';
-import VIDEOS from '@/data/video';
-import Video from '@/types/Video';
-
+import { ModalAction, ModalContext } from '../../context/modal';
+import VIDEOS from '../../data/video';
+import Video from '../../types/Video';
 import { GAP, SliderContainer, SliderItem, WIDTH } from './sliderStyles';
 
 const Slider = () => {
