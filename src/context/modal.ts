@@ -12,10 +12,10 @@ export enum ModalAction {
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-type ActionMap<M extends { [index: string]: any }> = {
-  [Key in keyof M]: M[Key] extends undefined
-    ? { type: Key }
-    : { type: Key; payload: M[Key] };
+type ActionMap<Payload extends { [index: string]: any }> = {
+  [Action in keyof Payload]: Payload[Action] extends undefined
+    ? { type: Action }
+    : { type: Action; payload: Payload[Action] };
 };
 
 type ModalPayload = {

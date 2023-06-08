@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 
-import Title from './Title';
+import Title from '.';
 
 test('Title is correcltly rendered', () => {
   render(<Title />);

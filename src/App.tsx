@@ -1,9 +1,9 @@
 import { useReducer } from 'react';
 
+import Modal from './components/Modal';
+import Slider from './components/Slider';
+import Title from './components/Title';
 import { initialState, ModalContext, modalReducer } from './context/modal';
-import Modal from './Modal';
-import Slider from './Slider';
-import Title from './Title';
 
 function App() {
   const [modalState, modalDispatch] = useReducer(modalReducer, initialState);
